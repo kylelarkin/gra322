@@ -16,13 +16,36 @@ header {
   height: 40vh;
 }
 
-header .inner {
+.inner {
   margin: 0 auto;
   max-width: 1280px;
+  position: relative;
+}
+
+header .inner {
+  height: 100%;
 }
 
 nav {
+  background-color: rgba(255,255,255,.4);
   display: none;
+  padding: 1rem;
+}
+
+nav ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -47,6 +70,53 @@ h1 {
 }
 
 .intro {
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
   text-transform: uppercase;
-  padding: 16rem 1rem 1rem 1rem;
+}
+
+.featured-work {
+  padding: 3rem 1rem;
+}
+
+.featured-work h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.featured-work figure {
+  margin-bottom: 2rem;
+}
+
+.featured-work figcaption {
+  font-size: 14px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 680px) {
+  .work-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .menu-button {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
 }
