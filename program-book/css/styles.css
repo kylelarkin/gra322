@@ -1,0 +1,54 @@
+/************
+* Core Elements and Typography 
+*************/
+h1 {
+
+}
+h2 {
+
+}
+p {
+
+}
+figcaption {
+
+}
+a {
+  
+}
+
+/************
+* Navigation Styles 
+*************/
+.nav-active {
+  color: red;
+}
+
+/************
+* Single Project Template 
+*************/
+.project h1 {
+
+}
+
+
+/************
+* Home Page Template 
+*************/
+.home h1 {
+
+}
+
+
+
+/************
+* Home Page Template 
+*************/
+@media screen and (min-width: 600px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+
+}
+

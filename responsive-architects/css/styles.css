@@ -13,7 +13,7 @@ p {
 header {
   background-image: url('../img/header.jpg');
   background-size: cover;
-  height: 40vh;
+  height: 80vh;
 }
 
 .inner {
@@ -28,8 +28,13 @@ header .inner {
 
 nav {
   background-color: rgba(255,255,255,.4);
-  display: none;
-  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: all 1s ease-out;
+}
+.open {
+  max-height: 200px;
 }
 
 nav ul {
@@ -60,13 +65,20 @@ h1 {
 .menu-button {
   background-color: rgba(255,255,255,.4);
   border: 1px solid transparent;
+  line-height: 0;
   padding: 1rem;
   -webkit-appearance: none;
 }
 
 .menu-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.fa-heart {
+  color: red;
+  font-size: 24px;
 }
 
 .intro {
@@ -78,7 +90,7 @@ h1 {
 }
 
 .featured-work {
-  padding: 3rem 1rem;
+  padding: 20rem 1rem;
 }
 
 .featured-work h2 {
@@ -98,11 +110,30 @@ h1 {
   text-transform: uppercase;
 }
 
+.about {
+  background: #fafafa;
+  padding: 1rem;
+}
+
+.about p {
+  border-left: 3px solid #ccc;
+  padding-left: 1rem;
+}
+
+footer {
+  padding: 1rem;
+}
+
 @media screen and (min-width: 680px) {
   .work-grid {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about .inner {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
   }
 }
 
@@ -112,11 +143,27 @@ h1 {
   }
 
   nav {
-    display: block;
+    display: block !important;
+    max-height: 200px;
+    width: auto;
   }
 
   nav ul {
     display: flex;
     gap: 2rem;
   }
+}
+
+.jarallax {
+  position: relative;
+  z-index: 0;
+}
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }

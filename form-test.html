@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Don't forget to change your title -->
+  <title>Table of Contents</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Load Styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<!-- Add your content here -->
+<h1>Form Test</h1>
+
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
+
+
+<!-- Load Scripts -->
+<script src="js/scripts.js"></script>
+</body>
+</html>
